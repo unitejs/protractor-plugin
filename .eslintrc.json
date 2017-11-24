@@ -1,0 +1,23 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 5,
+		"sourceType": "module"
+	},
+	"extends": [
+		"eslint:recommended",
+        "plugin:protractor/recommended"
+	],
+	"env": {
+        "browser": true
+	},
+	"globals": {
+		"require": true,
+        "exports": true
+	},
+	"rules": {
+	},
+	"plugins": [
+        "protractor"
+    ],
+	"settings": {}
+}

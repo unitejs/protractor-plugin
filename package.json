@@ -1,0 +1,29 @@
+{
+  "name": "unitejs-protractor-plugin",
+  "version": "1.0.0",
+  "description": "UniteJS Protractor Plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unitejs/protractor-plugin.git"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "unite",
+    "unitejs",
+    "protractor"
+  ],
+  "author": "martyn@unitejs.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unitejs/protractor-plugin/issues"
+  },
+  "homepage": "https://github.com/unitejs/protractor-plugin#readme",
+  "devDependencies": {
+    "@types/selenium-webdriver": "^3.0.6",
+    "aurelia-protractor-plugin": "^1.0.6",
+    "eslint": "^4.11.0",
+    "eslint-plugin-protractor": "^1.40.0",
+    "protractor": "^5.2.0"
+  }
+}
