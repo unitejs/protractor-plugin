@@ -47,10 +47,12 @@ function customShadowRoot(selector, using) {
 exports.setup = function () {
     browser.ignoreSynchronization = true;
 
-    var uniteConfig = require("../unite.json");
+    var path = require("path");
+    var uniteConfig = require(path.join(process.cwd(), "../unite.json"));
 
-    if (/(aurelia)/i.test(uniteConfig.applicationFramework)) {
-        require("aurelia-protractor-plugin");
+    if (/aurelia/i.test(uniteConfig.applicationFramework)) {
+        var app = require("aurelia-protractor-plugin");
+        app.setup();
         browser.uniteLoadAndWaitForPage = browser.loadAndWaitForAureliaPage;
     } else {
         browser.uniteLoadAndWaitForPage = uniteLoadAndWaitForPage;
