@@ -1,8 +1,8 @@
 function uniteLoadAndWaitForPage(url, timeout) {
-    return browser.get(url).then(() => {
+    return browser.get(url).then(function () {
         let rootLocator = $("#root");
-        return browser.wait(protractor.ExpectedConditions.presenceOf(rootLocator,
-            () => {
+        return browser.wait(protractor.ExpectedConditions.and(protractor.ExpectedConditions.presenceOf(rootLocator),
+            function() {
                 return rootLocator.getText()
                     .then((text) => {
                         return text && text.length > 0;

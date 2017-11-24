@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+* Fixed presenceOf Condition
+
 ## 1.0.2
 
 * Updated Aurelia plugin require
