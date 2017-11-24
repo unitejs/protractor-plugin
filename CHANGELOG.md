@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+* Fixed customShadowRoot
+
 ## 1.0.3
 
 * Fixed presenceOf Condition

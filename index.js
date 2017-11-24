@@ -12,7 +12,7 @@ function uniteLoadAndWaitForPage(url, timeout) {
 }
 
 /* Borrowed from here https://github.com/angular/protractor/pull/4392/files */
-function customShadowRoot(selector, using) {
+function customShadowRoot(selector, starting) {
     var selectors = selector.split('::sr');
     if (selectors.length === 0) {
         return [];
@@ -37,7 +37,7 @@ function customShadowRoot(selector, using) {
         return matches;
     };
 
-    var matches = findAllMatches(selectors.shift().trim(), [using || document], true);
+    var matches = findAllMatches(selectors.shift().trim(), [starting || document], true);
     while (selectors.length > 0 && matches.length > 0) {
         matches = findAllMatches(selectors.shift().trim(), matches, false);
     }
